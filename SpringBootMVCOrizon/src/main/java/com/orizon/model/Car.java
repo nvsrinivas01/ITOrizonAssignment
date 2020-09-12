@@ -12,7 +12,7 @@ public class Car {
 	
 
 // Mandatory Fields
-// Primary Key Auto Generation Annotation
+
 	@Id
 	@Column
 	private int id;
@@ -116,7 +116,7 @@ public class Car {
 		this.seating_capacity = seating_capacity;
 	}
 
-	//toString() for Debugging purpose
+	
 	@Override
 	public String toString() {
 		return "Car [id=" + id + ", company=" + company + ", model=" + model + ", color=" + color
