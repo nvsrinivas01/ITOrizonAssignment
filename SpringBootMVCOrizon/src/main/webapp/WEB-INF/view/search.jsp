@@ -25,7 +25,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-7">
-        <h1 class="display-4 mt-5 mb-4"><u>Fill Any One Detali</u></h1>
+        <h1 class="display-4 mt-5 mb-4"><u>Fill Any One Detail</u></h1>
 
         <div class="form-group">
           <table>
