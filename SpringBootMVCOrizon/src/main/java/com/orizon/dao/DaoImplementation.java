@@ -51,7 +51,7 @@ public class DaoImplementation implements Dao {
 	public List<Car> findCarByColor(String color) {
 
 		Session session = entityManager.unwrap(Session.class);
-		List <Car> cars = session.createQuery("FROM Car e WHERE e.color = :color").setParameter("color", color).getResultList();
+		List <Car> cars = session.createQuery("FROM Car c WHERE c.color = :color").setParameter("color", color).getResultList();
 		
 		return cars;
 	}
@@ -59,7 +59,7 @@ public class DaoImplementation implements Dao {
 	@Override
 	public List<Car> findCarByModel(String model1) {
 		Session session = entityManager.unwrap(Session.class);
-		List <Car> cars = session.createQuery("FROM Car e WHERE e.model = :model").setParameter("model", model1).getResultList();
+		List <Car> cars = session.createQuery("FROM Car c WHERE c.model = :model").setParameter("model", model1).getResultList();
 		
 		return cars;
 	}
@@ -67,14 +67,14 @@ public class DaoImplementation implements Dao {
 	@Override
 	public List<Car> findCarByYearOfPurchase(String yop) {
 		Session session = entityManager.unwrap(Session.class);
-		List <Car> cars = session.createQuery("FROM Car e WHERE e.date_of_purchase LIKE :yop").setParameter("yop", "%"+yop+"%").getResultList();
+		List <Car> cars = session.createQuery("FROM Car c WHERE c.date_of_purchase LIKE :yop").setParameter("yop", "%"+yop+"%").getResultList();
 		return cars;
 	}
 
 	@Override
 	public List<Car> findCarByPriceRange(double price) {
 		Session session = entityManager.unwrap(Session.class);
-		List <Car> cars = session.createQuery("FROM Car e WHERE e.price = :price").setParameter("price", price).getResultList();
+		List <Car> cars = session.createQuery("FROM Car c WHERE c.price = :price").setParameter("price", price).getResultList();
 		return cars;
 	}
 
